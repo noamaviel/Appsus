@@ -189,8 +189,8 @@ function _createNotes() {
                 type: "noteImg",
                 isPinned: true,
                 info: {
-                    url: "https://picsum.photos/id/691/200/120",
-                    title: "Me playing Mi"
+                    url: "https://picsum.photos/id/237/200/120",
+                    title: "My cute Dog"
                 },
                 style: {
                     backgroundColor: "#F6B6B4"
@@ -217,7 +217,7 @@ function _createNotes() {
                 type: "noteVideo",
                 isPinned: true,
                 info: {
-                    videoUrl: "https://www.youtube.com/embed/vmC30m8jOZU",
+                    videoUrl: "https://www.youtube.com/embed/ICAgFDASPII",
                     title: "Arthur!",
                 },
                 style: {
@@ -297,8 +297,8 @@ function _createNotes() {
                 type: "noteImg",
                 isPinned: true,
                 info: {
-                    url: "https://picsum.photos/id/691/200/120",
-                    title: "Me playing Mi"
+                    url: "https://picsum.photos/id/985/200/120",
+                    title: "The last trip..."
                 },
                 style: {
                     backgroundColor: "#F6B6B4"
