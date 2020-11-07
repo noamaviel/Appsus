@@ -18,7 +18,7 @@ export default {
             this.msg = msg;
             setTimeout(() => {
                 this.msg = null;
-            }, 3000)
+            }, 1000)
         })
     }
 }

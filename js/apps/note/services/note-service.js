@@ -62,7 +62,7 @@ function addTxtNote(noteData) {
             txt: noteData.val
         },
         style: {
-            backgroundColor: "#c1ff9b"
+            backgroundColor: "#BFE4DD"
         }
     }
     gNotes.push(note);
@@ -78,7 +78,7 @@ function addImgNote(noteData) {
             title: ''
         },
         style: {
-            backgroundColor: "#b4e1ff"
+            backgroundColor: "#F6B6B4"
         }
     }
     gNotes.push(note);
@@ -95,7 +95,7 @@ function addTodoNote(noteData) {
             todos: _getTodoArray(noteData.val)
         },
         style: {
-            backgroundColor: "#fface4"
+            backgroundColor: "#C1C1C1"
         }
     }
     gNotes.push(todo);
@@ -138,7 +138,7 @@ function addVideoNote(noteData) {
             title: "Video Title",
         },
         style: {
-            backgroundColor: "#ab87ff"
+            backgroundColor: "#FFFFFF"
         }
     }
     gNotes.push(note);
@@ -156,7 +156,8 @@ function _createNotes() {
                 txt: "Fullstack Me Baby!"
             },
             style: {
-                backgroundColor: "#F5FFC6"
+                // backgroundColor: "#F5FFC6"
+                backgroundColor: "#F6B6B4"
             }
         },
         {
@@ -168,7 +169,7 @@ function _createNotes() {
                 title: "Me playing Mi"
             },
             style: {
-                backgroundColor: "#F5FFC6"
+                backgroundColor: "#F6B6B4"
             }
         },
         {
@@ -183,7 +184,7 @@ function _createNotes() {
                 ]
             },
             style: {
-                backgroundColor: "#F5FFC6"
+                backgroundColor: "#F6B6B4"
             }
         },
         {
@@ -195,7 +196,7 @@ function _createNotes() {
                 title: "Arthur!",
             },
             style: {
-                backgroundColor: "#F5FFC6"
+                backgroundColor: "#F6B6B4"
             }
         }
     ];

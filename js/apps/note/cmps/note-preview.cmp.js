@@ -13,7 +13,7 @@ export default {
         <section class="note-preview">
             <component :is="note.type" :info="note.info" :noteId="note.id" class="note-content" />
             <hr/>
-            <note-edit :noteId = "note.id" class="note-edit"></note-edit>
+            <note-edit :noteId = "note.id" class="note-edit flex"></note-edit>
 
         <!-- ADD NOTE CONTROLS CMP - APPEARS ON HOVER - DELETE - CLONE - BGC - PIN - 
         EDIT (CONTENT EDITABLE - NOT A MUST) - LAST! NOT EASY! -->

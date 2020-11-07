@@ -1,5 +1,5 @@
 .note-preview .note-content {
-    height: 180px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -8,6 +8,10 @@
     font-family: ArchitectsDaughterR, cursive;
     font-size: 20px;
     font-weight: 600;
+}
+
+.note-preview .note-edit{
+    flex-direction: column;
 }
 
 

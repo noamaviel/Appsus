@@ -1,25 +1,32 @@
 .note-edit-container {
     justify-content: space-around;
     cursor: pointer;
-    margin-top: 8px;
-    margin-bottom: 8px;
     width: 160px;
     padding-inline-start: 0;
+    position: relative;
+    top:10px;
 
 }
 
 .note-edit-container i {
     cursor: pointer;
+    color: #777777;
 }
 
 .note-edit-container li{
 margin:0;
 }
 
+.note-edit-container i:hover{
+    color: inherit;
+}
+
 .colors-container {
     display: flex;
     margin-top: 10px;
+    align-items: center;
     justify-content: space-around;
+    width: 120px;
    
 }
 
@@ -28,7 +35,7 @@ margin:0;
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid rgb(59, 59, 59);
     margin-bottom: 3px;
 }
 
