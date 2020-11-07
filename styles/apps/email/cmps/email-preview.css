@@ -1,6 +1,6 @@
 .email-preview {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     font-size: .875rem;
     height: 30px;
@@ -13,8 +13,14 @@
 
 /* ============ */
 
+.email-preview i{
+    padding-inline-start: 1.25rem;
+    min-width:3%;
+}
+
 .email-sentby {
     font-weight: bold;
+    min-width:7%;
     padding-inline-start: 1.25rem;
 }
 
@@ -23,26 +29,30 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-inline-start: 1.25rem;
+
 }
 
 .email-body {
-    min-width: 40%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 50%;
+    padding-inline-start: 1.25rem;
 }
 
 .email-sentat {
-    padding-inline-end: 1.25rem;
+    min-width: 10%;
+    padding-inline-start: 1.25rem;
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
 
-@media (max-width: 1200px) {}
+/* @media (max-width: 1200px) {}
 
 @media (max-width: 840px) {
     .email-sentby {
         min-width: 15%;
         padding-inline-start: 0rem;
     }
-}
+} */
