@@ -74,12 +74,17 @@ function _createEmail(sendTo = '', subject = '', body = '') {
 
 function getTime() {
     const now = new Date();
-    let currTime = now.getHours() + ":" + now.getMinutes()
+    let currTime = now.getHours() + ":" + now.getMinutes();
     return currTime
 }
 
 function getUnreadCount() {
-    return gEmails.filter(email => !email.isRead).length;
+    if (gEmails) {
+        return gEmails.filter(email => !email.isRead).length;
+    } else {
+        console.log('gEmails not ready')
+        return 0
+    }
 }
 
 

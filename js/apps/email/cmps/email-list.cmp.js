@@ -19,7 +19,7 @@ export default {
     `,
     data() {
         return {
-          
+
         }
     },
     methods: {
@@ -27,7 +27,7 @@ export default {
     },
     computed: {
         unReadCount() {
-            return emailService.getUnreadCount();
+            return emailService.getUnreadCount()
         }
     },
     mounted() {
