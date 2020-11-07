@@ -33,11 +33,11 @@ export default {
                 });
         },
         onBackToInbox() {
-            emailService.markAsRead(this.email.id)
-                .then(res => {
-                    console.log(res);
-                    this.$router.push('/email/filter');
-                });
+            // emailService.markAsRead(this.email.id)
+            //     .then(res => {
+            //         console.log(res);
+            this.$router.push('/email/filter');
+            // });
         },
         onSendToNote() {
             console.log('onSendToNote', this.email.body)
@@ -61,12 +61,13 @@ export default {
     },
     created() {
         const id = this.$route.params.rEmailId;
-        console.log('email-read id', id);
-        console.log('rEmailId', this.rEmailId)
+        emailService.markAsRead(id);
         emailService.getEmailById(id)
             .then(rEmail => {
                 this.email = rEmail;
             })
+
+
     },
     components: {
 
