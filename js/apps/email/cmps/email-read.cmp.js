@@ -10,14 +10,9 @@ export default {
         <button @click="onBackToInbox"><i class="fas fa-backspace"></i> Back to Inbox</button>
         <button @click="onDelete"><i class="fas fa-trash"></i></button>
         <button @click="onSendToNote">Send to Note</button>
-<<<<<<< HEAD
-          <h3>From: {{email.sentBy}}</h3>
-          <h4>Sent at: {{email.sentAt}}</h4>
-=======
         <h3>From: {{email.sentBy}}</h3>
         <!-- <h1> rEmailID: {{rEmailId}}</h1> -->
           <h4>Sent at: {{showSentAt}}</h4>
->>>>>>> 2d2061112463ee03fc63662de6e330ca701ff3be
           <h5>Subject: {{email.subject}}</h5>
           <h5>{{email.body}}</h5>
           <!-- <long-text v-bind:txt="book.description"></long-text> -->
@@ -55,10 +50,11 @@ export default {
         }
     },
     computed: {
-        // showSentAt() {
-        //     let date = new Date(this.email.sentAt);
-        //     return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
-        // }
+        showSentAt() {
+            console.log('sentAt', this.email.sentAt)
+            // let date = new Date(this.email.sentAt);
+            return this.email.sentAt
+        }
     },
     mounted() {
 
