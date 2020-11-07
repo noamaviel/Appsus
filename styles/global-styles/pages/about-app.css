@@ -1,9 +1,9 @@
 .about-us-app {
     background-color: rgb(231, 231, 231);
-    background: linear-gradient( rgb(185, 245, 235) 0%, rgba(253, 199, 196, 1) 100%);
     flex-grow: 1;
     flex-direction: column;
     font-family: poppinsL, sans-serif;
+    
 }
 
 .about-us-app h1 {
@@ -12,11 +12,15 @@
     font-size: 2.5rem;
     font-family: FrederickatheGreatR, cursive;
     font-weight: 500;
+    /* position: absolute; */
+    /* top: 140px; */
 }
 
 .about-us-container {
     align-items: center;
     max-width: 700px;
+    /* position: absolute;
+    bottom: 80px; */
 }
 
 .about-us-container>* {
@@ -62,7 +66,7 @@
         padding-top: 0;
         margin-top: 0;
     }
-    .about-us-app h1{
+    .about-us-app h1 {
         margin-bottom: 0;
     }
     .about-us-container .about-card {
@@ -70,13 +74,10 @@
         flex-wrap: wrap;
         text-align: center;
         padding-top: 0;
-
     }
-
     .about-us-container .about-card:last-child {
         margin-top: 160px;
     }
-
     .about-us-app h1 {
         margin: 20px;
         text-align: center;

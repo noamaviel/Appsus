@@ -9,13 +9,6 @@ export default {
             
                 <form @submit.prevent="emitFilter" > 
 
-                <!-- <h3>Note Filter</h3> -->
-
-                <!-- <label>
-                    <input class="created-note-input" type="date" v-model.number="filterBy.created" placeholder="" @change="emitFilter"/>
-                </label> -->
-
-                
                 <label>
                     <input class="note-input" type="text" v-model="filterBy.byText" placeholder="Search here" />
                 </label>
@@ -23,14 +16,8 @@ export default {
                 <input type="submit" value="Search"><i class="fas fa-search"></i>
                 </button>
                 
-                <!-- <label> Pinned notes:
-                    <input class="pined-input" @change="emitFilter" type="checkbox" v-model="filterBy.isPinned"/>
-                </label> -->
-                
                 </form>
             
-            <!-- <hr />
-            {{filterBy}} -->
             </div>
         </section>
     `,

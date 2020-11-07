@@ -28,11 +28,11 @@ export default {
            
         </ul>
         <ul v-if="showColors" class="colors-container">
-            <li class="color" style="background-color: #FFACE4" @click="changeNoteColor($event,'#FFACE4')"></li>
-            <li class="color" style="background-color: #ab87ff" @click="changeNoteColor($event, '#ab87ff')"></li>
-            <li class="color" style="background-color: #b4e1ff" @click="changeNoteColor($event, '#b4e1ff' )"></li>
-            <li class="color" style="background-color: #f5ffc6" @click="changeNoteColor($event, '#f5ffc6')"></li>
-            <li class="color" style="background-color: #C1FF9B" @click="changeNoteColor($event, '#C1FF9B')"></li>
+            <li class="color" style="background-color: #F9BEBD" @click="changeNoteColor($event,'#F9BEBD')"></li>
+            <li class="color" style="background-color: #C1C1C1" @click="changeNoteColor($event, '#C1C1C1')"></li>
+            <li class="color" style="background-color: #BFE4DD" @click="changeNoteColor($event, '#BFE4DD' )"></li>
+            <li class="color" style="background-color: #FFFFFF" @click="changeNoteColor($event, '#FFFFFF')"></li>
+            <li class="color" style="background-color: #ffce9b" @click="changeNoteColor($event, '#ffce9b')"></li>
 
         </ul>
     </section>

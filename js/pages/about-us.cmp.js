@@ -22,7 +22,7 @@ export default {
                 <div class="about-text"> 
                     <h2>Mor Lev Ari</h2>
                     <p> I'm high energy person, with an infectious enthusiasm for technology. Excited to work with people who share my passion. <br/> 
-                        I love gifs, cocktails, and avocado 🥑. </p>
+                        I love gifts, cocktails, and avocado 🥑. </p>
                     <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>  
                     <a href="https://wa.me/972549916031" target="_blank"><i class="fab fa-whatsapp"></i></a>  
                     <a href="https://www.gmail.com" target="_blank"><i class="fas fa-envelope-open"></i></a>  
