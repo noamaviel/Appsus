@@ -8,8 +8,9 @@ export default {
     template: `
     <section v-if="email" class="email-read">
         <button @click="onBackToInbox"><i class="fas fa-backspace"></i> Back to Inbox</button>
-        <button @click="onDelete"><i class="fas fa-trash"></i></button>
-        <button @click="onSendToNote">Send to Note</button>
+        <button @click="onDelete"><i class="fas fa-trash"></i> Delete</button>
+        <button @click="onSendToNote"><i class="fas fa-file-import"></i> Send to Note</button>
+        <hr/>
         <h3>From: {{email.sendTo}}</h3>
         <!-- <h1> rEmailID: {{rEmailId}}</h1> -->
           <h4>Sent at: {{showSentAt}}</h4>

@@ -13,13 +13,19 @@ export default {
     <section class="email-app">
         <div class='side-bar'>
             
-            <router-link :to="'/email/compose'" exact class="compose-button"><i class="fas fa-plus"></i> Compose</router-link>
-           <button @click="onInbox"><i class="fas fa-inbox"></i>Inbox</button>
-            <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-inbox"></i> Inbox</router-link> -->
-            <button @click="onInbox"><i class="fas fa-paper-plane"></i> Sent</button>
-            <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-paper-plane"></i> Sent</router-link> -->
-             <button @click="onStarred"><i class="fas fa-star"></i> Starred</button>
-            <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-star"></i> Starred</router-link> -->
+            <div class="compose-button-container">
+                <router-link :to="'/email/compose'" exact class="compose-button flex"><i class="fas fa-plus"></i> Compose</router-link>
+            </div>
+
+            <div class="email-nav-buttons flex">
+                <button @click="onInbox"><i class="fas fa-inbox"></i>Inbox</button>
+                <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-inbox"></i> Inbox</router-link> -->
+                <button @click="onInbox"><i class="fas fa-paper-plane"></i> Sent</button>
+                <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-paper-plane"></i> Sent</router-link> -->
+                <button @click="onStarred"><i class="fas fa-star"></i> Starred</button>
+                <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-star"></i> Starred</router-link> -->
+            </div>
+
 
         </div>
         <div class="work-area">

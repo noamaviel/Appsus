@@ -26,6 +26,7 @@
 @import './apps/email/cmps/email-filter.css';
 @import './apps/email/cmps/email-compose.css';
 @import './apps/email/cmps/email-side-bar.css';
+@import './apps/email/cmps/email-read.css';
 /* PAGES */
 
 @import './apps/email/pages/email-app.css';

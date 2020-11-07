@@ -8,7 +8,8 @@ export default {
         <h1>Wow! A whole page just about us!</h1>
         <div class="about-us-container"> 
             <div class="about-card flex"> 
-                <img src="../../styles/assets/imgs/noam.jpg">
+            <!-- <img src="../../styles/assets/imgs/noam.jpg"> -->
+            <img src="https://i.ibb.co/Xzc2y4t/noam.jpg" alt="noam">
                 <div class="about-text"> 
                     <h2>Noam Aviel</h2>
                     <p> 🎵 Noam Aviel is the Associate Conductor of the San Antonio Symphony, where she conducts over 50 performances every season, including the annual, fully-staged production of Tchaikovsky’s The Nutcracker in collaboration with Ballet San Antonio. Aviel also leads the Young People’s Concerts, Pops Series, Community and Outreach concerts, and acts as the cover conductor for the Classics Series. </p>
@@ -18,7 +19,8 @@ export default {
                 </div>
             </div>
             <div class="about-card flex"> 
-                <img src="../../styles/assets/imgs/mor.jpg">
+                <!-- <img src="../../styles/assets/imgs/mor.jpg"> -->
+                <img src="https://i.ibb.co/3MpR08d/mor.jpg" alt="mor">
                 <div class="about-text"> 
                     <h2>Mor Lev Ari</h2>
                     <p> I'm high energy person, with an infectious enthusiasm for technology. Excited to work with people who share my passion. <br/> 
@@ -31,4 +33,6 @@ export default {
         </div>
     </section>
     `
-}  
+}
+
+

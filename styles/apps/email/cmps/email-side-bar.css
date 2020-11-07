@@ -1,6 +1,4 @@
 .email-app .side-bar {
-    display: flex;
-    flex-direction: column;
     min-width: 100px;
     padding: 30px 20px 10px 20px;
     margin: 0 10px 0 10px;
@@ -9,21 +7,45 @@
     border-radius: 10px;
 }
 
-.email-app .side-bar a:first-child {
+.compose-button-container {
     box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
     border-radius: 20px;
     width: 100px;
     text-align: center;
     align-items: center;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
-.email-app .side-bar a:first-child:hover {
-transition: 0.3s;
+.compose-button-container:hover{
+    transition: 0.3s;
     background-color: #eff0f1;
 }
 
-.email-app .side-bar a:hover {
+.compose-button-container i {
+    margin-right: 10px;
+}
+
+
+.email-app .email-nav-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.email-app .email-nav-buttons button{
+width: 162px;
+}
+
+.email-app .email-nav-buttons button {
+    text-align: left;
+    font-size: 1em;
+    margin:10px 0px 10px 0px
+}
+.email-app .email-nav-buttons button i {
+    margin-right: 8px;
+}
+
+
+.email-app button:hover {
     box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
 }
 
