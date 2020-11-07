@@ -1,12 +1,21 @@
 .email-filter {
   max-width: 400px;
 }
+.email-filter i{
+font-size: 1.1em;
+}
+.email-filter i:last-child{
+color: #a7a5a5;
+font-size: 20px;
+}
+.email-filter i:last-child:hover{
+color: #6F9B97;
+}
 
 .email-filter-container {
   border: 1px solid rgb(105, 105, 105);
   border-radius: 2px;
   background-color: #fff;
-  margin-bottom: 16px;
 }
 
 .email-filter-container .email-input {
@@ -30,9 +39,6 @@
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 15px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -54,7 +60,7 @@
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: rgb(218, 218, 218);
   padding-bottom: 0;
 }
 
@@ -63,7 +69,7 @@
 }
 
 .checkbox-container input:checked~.checkmark {
-  background-color: #68c5ce;
+  background-color: #b4dfdf;
 }
 
 .checkmark:after {
@@ -81,9 +87,7 @@
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid rgb(68, 68, 68);
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }

@@ -1,6 +1,6 @@
 .email-preview {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     font-size: .875rem;
     height: 30px;
@@ -13,24 +13,23 @@
 
 /* ============ */
 
-.email-preview i{
+.email-preview i {
     padding-inline-start: 1.25rem;
-    min-width:3%;
+    min-width: 3%;
 }
 
 .email-sentby {
     font-weight: bold;
-    min-width:7%;
-    padding-inline-start: 1.25rem;
+    min-width: 10;
+    /* padding-inline-start: 1.25rem; */
 }
 
 .email-subject {
-    min-width: 30%;
+    min-width: 27%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-inline-start: 1.25rem;
-
+    /* padding-inline-start: 1.25rem; */
 }
 
 .email-body {
@@ -38,21 +37,39 @@
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 50%;
-    padding-inline-start: 1.25rem;
+    /* padding-inline-start: 1.25rem; */
 }
 
 .email-sentat {
     min-width: 10%;
-    padding-inline-start: 1.25rem;
+    /* padding-inline-start: 1.25rem; */
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
 
-/* @media (max-width: 1200px) {}
+@media (max-width: 1200px) {}
 
-@media (max-width: 840px) {
-    .email-sentby {
-        min-width: 15%;
-        padding-inline-start: 0rem;
+@media (max-width: 680px) {
+    .email-preview {
+        /* max-width: 380px; */
+        font-size: .700em;
     }
-} */
+    .email-preview i {
+        padding-inline-start: .5rem;
+        min-width: 3%;
+    }
+    .email-sentby {
+        font-weight: bold;
+        padding-inline-end: .5rem;
+        width: 20px;
+    }
+    .email-subject {
+        width: 10px;
+    }
+    .email-body {
+        width: 10px;
+    }
+    .email-sentat {
+        min-width: 10%;
+    }
+}
