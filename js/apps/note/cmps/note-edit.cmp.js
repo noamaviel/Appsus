@@ -13,10 +13,10 @@ export default {
             <li @click="pinNote">
                 <i class="fas fa-thumbtack"></i>
             </li>
-            
+<!--             
             <li @click="editNote(note)">
                 <i class="fas fa-edit"></i>
-            </li>
+            </li> -->
 
             <li @click="showColors= !showColors">
                 <i class="fas fa-palette"></i>
