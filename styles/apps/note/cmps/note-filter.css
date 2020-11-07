@@ -13,6 +13,13 @@
     font-size: 20px;
 }
 
+.note-search i {
+    color: rgb(156, 156, 156);
+}
+.note-search i:hover{
+    color: #6f9b97;
+}
+
 .note-search input {
     display: none;
 }

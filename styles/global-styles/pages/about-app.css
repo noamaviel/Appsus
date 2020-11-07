@@ -59,6 +59,7 @@
 .about-us-container .about-card img {
     max-width: 200px;
     border-radius: 20px;
+    border: .8px solid rgb(200, 200, 200);
 }
 
 @media (max-width: 840px) {
