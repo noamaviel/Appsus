@@ -10,7 +10,7 @@ export default {
         <button @click="onBackToInbox"><i class="fas fa-backspace"></i> Back to Inbox</button>
         <button @click="onDelete"><i class="fas fa-trash"></i></button>
         <button @click="onSendToNote">Send to Note</button>
-        <h3>From: {{email.sentBy}}</h3>
+        <h3>From: {{email.sendTo}}</h3>
         <!-- <h1> rEmailID: {{rEmailId}}</h1> -->
           <h4>Sent at: {{showSentAt}}</h4>
           <h5>Subject: {{email.subject}}</h5>
