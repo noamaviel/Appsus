@@ -40,29 +40,29 @@ function _createEmails() {
         return Promise.resolve(emails);
     } else {
         emails = [];
-        emails.push(_createEmail('First default email'));
-        emails.push(_createEmail('Second default email'));
-        emails.push(_createEmail('Third default email'));
-        emails.push(_createEmail('First default email'));
-        emails.push(_createEmail('Second default email'));
-        emails.push(_createEmail('Third default email'));
-        emails.push(_createEmail('First default email'));
-        emails.push(_createEmail('Second default email'));
-        emails.push(_createEmail('Third default email'));
+        emails.push(_createEmail('Mor','Where to Drink Beer Right Now', 'Humans have a natural desire for closure– '));
+        emails.push(_createEmail('Neta','As You Wish', 'we don’t like having gaps in our knowledge.'));
+        emails.push(_createEmail('Matan', 'NEW! Vacation on Mars', 'You can leverage this desire for closure by leaving '));
+        emails.push(_createEmail('Jill', 'Mary, do you remember me', 'You can make subscribers curious by asking a question,'));
+        emails.push(_createEmail('Simon','I love you', 'Being humorous requires a bit more thought and creativity, '));
+        emails.push(_createEmail('Paul','Seriously, Who DOES This?', 'Everyone has a bit of vanity. '));
+        emails.push(_createEmail('David', 'Thanks for helping us', 'That’s why some of the most clever subject lines'));
+        emails.push(_createEmail('Shlomo', 'I’m deleting your Envira account', 'To do this, you can either promise something '));
+        emails.push(_createEmail('Aviva', '*Don’t Open This Email*', 'Here are some great examples of clever email'));
         gEmails = emails;
         storageService.storeToStorage(STORAGE_KEY, emails);
         return Promise.resolve(emails);
     }
 }
 
-function _createEmail(subject = '') {
+function _createEmail(sendTo ='', subject = '', body = '') {
 
     const email = {
         id: utilService.makeId(),
         sentBy: 'Noam',
-        sendTo: 'David',
+        sendTo: sendTo,
         subject: subject,
-        body: 'Email body text',
+        body: body,
         isRead: false,
         sentAt: getTime(),
         draft: false
