@@ -79,12 +79,7 @@ function getTime() {
 }
 
 function getUnreadCount() {
-    if (gEmails) {
-        return gEmails.filter(email => !email.isRead).length;
-    } else {
-        console.log('gEmails not ready')
-        return 0
-    }
+    return gEmails.filter(email => !email.isRead).length;
 }
 
 

@@ -43,7 +43,7 @@ export default {
         return {
             emails: null,
             filterBy: null,
-            isStarred: false
+            isStarred: false,
         }
     },
     methods: {
