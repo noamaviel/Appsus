@@ -27,7 +27,7 @@ export default {
     data() {
 
         return {
-            notes: noteService.getNotes(),
+            notes: null,
             selectedNote: null,
             // note: noteService.getNotes(),
             filterBy: null,
@@ -88,8 +88,12 @@ export default {
     },
 
     created() {
-        this.notes = noteService.getNotes();
-
+        // this.notes = noteService.getNotes();
+        noteService.getNotes()
+        .then(notes => {
+            console.log('notes app finished created', notes);
+            this.notes = notes;
+        });
 
     }
     ,

@@ -1,10 +1,11 @@
 // console.log('note-service');
 
 import { utilService } from '../../../services/util-service.js'
+import { storageService } from '../../../services/local-storage-service.js'
 
+const STORAGE_KEY = 'notesDB';
 
-
-const gNotes = _createNotes();
+var gNotes = [];
 
 export const noteService = {
     getNotes,
@@ -16,11 +17,20 @@ export const noteService = {
     addNote,
     changeNoteColor,
     pinToStart,
+    updateLocalStorage
 }
 
 function getNotes() {
-    return gNotes;
+    return _createNotes()
+    .then(notes => {
+        gNotes = notes;
+        return Promise.resolve(notes);
+    })
+    .catch(err => {
+        console.log('default notes', err);
+    });
 }
+
 
 // function getNotes() {
 //     return Promise.resolve(gNotes);
@@ -30,6 +40,7 @@ function getNotes() {
 function remove(noteId) {
     const idx = gNotes.findIndex(note => note.id === noteId);
     gNotes.splice(idx, 1);
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
 
@@ -66,6 +77,7 @@ function addTxtNote(noteData) {
         }
     }
     gNotes.push(note);
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
 
@@ -82,6 +94,7 @@ function addImgNote(noteData) {
         }
     }
     gNotes.push(note);
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
 
@@ -99,6 +112,7 @@ function addTodoNote(noteData) {
         }
     }
     gNotes.push(todo);
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
 function _getTodoArray(valStr) {
@@ -116,7 +130,8 @@ function _getTodoArray(valStr) {
 
 function changeNoteColor(noteId, color) {
     const idx = gNotes.findIndex(note => note.id === noteId);
-    gNotes[idx].style.backgroundColor = color
+    gNotes[idx].style.backgroundColor = color;
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
 function pinToStart(noteId) {
@@ -124,6 +139,11 @@ function pinToStart(noteId) {
     let note = { ...gNotes[idx] };
     gNotes.splice(idx, 1);
     gNotes.unshift(note);
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
+}
+
+function updateLocalStorage() {
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
 
@@ -142,144 +162,150 @@ function addVideoNote(noteData) {
         }
     }
     gNotes.push(note);
+    storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
 function _createNotes() {
+    let notes = storageService.loadFromStorage(STORAGE_KEY);
+    if (notes) {
+        return Promise.resolve(notes);
+    } else {
 
-
-    let notes = [
-        {
-            id: utilService.makeId(),
-            type: "noteText",
-            isPinned: true,
-            info: {
-                txt: "Bye bye Trump :)"
+        let notes = [
+            {
+                id: utilService.makeId(),
+                type: "noteText",
+                isPinned: true,
+                info: {
+                    txt: "Bye bye Trump :)"
+                },
+                style: {
+                    // backgroundColor: "#F5FFC6"
+                    backgroundColor: "#F6B6B4"
+                }
             },
-            style: {
-                // backgroundColor: "#F5FFC6"
-                backgroundColor: "#F6B6B4"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteImg",
-            isPinned: true,
-            info: {
-                url: "https://picsum.photos/id/691/200/120",
-                title: "Me playing Mi"
+            {
+                id: utilService.makeId(),
+                type: "noteImg",
+                isPinned: true,
+                info: {
+                    url: "https://picsum.photos/id/691/200/120",
+                    title: "Me playing Mi"
+                },
+                style: {
+                    backgroundColor: "#F6B6B4"
+                }
             },
-            style: {
-                backgroundColor: "#F6B6B4"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteTodo",
-            isPinned: true,
-            info: {
-                title: "Things to do:",
-                todos: [
-                    { txt: "sleep", doneAt: null },
-                    { txt: "eat", doneAt: 187111111 },
-                    { txt: "take a shower", doneAt: 187111111 }
-                ]
+            {
+                id: utilService.makeId(),
+                type: "noteTodo",
+                isPinned: true,
+                info: {
+                    title: "Things to do:",
+                    todos: [
+                        { txt: "sleep", doneAt: null },
+                        { txt: "eat", doneAt: 187111111 },
+                        { txt: "take a shower", doneAt: 187111111 }
+                    ]
+                },
+                style: {
+                    backgroundColor: "#C1C1C1"
+                }
             },
-            style: {
-                backgroundColor: "#C1C1C1"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteVideo",
-            isPinned: true,
-            info: {
-                videoUrl: "https://www.youtube.com/embed/vmC30m8jOZU",
-                title: "Arthur!",
+            {
+                id: utilService.makeId(),
+                type: "noteVideo",
+                isPinned: true,
+                info: {
+                    videoUrl: "https://www.youtube.com/embed/vmC30m8jOZU",
+                    title: "Arthur!",
+                },
+                style: {
+                    backgroundColor: "#F6B6B4"
+                }
             },
-            style: {
-                backgroundColor: "#F6B6B4"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteText",
-            isPinned: true,
-            info: {
-                txt: "Price of my therapist: 400 NIS"
+            {
+                id: utilService.makeId(),
+                type: "noteText",
+                isPinned: true,
+                info: {
+                    txt: "Price of my therapist: 400 NIS"
+                },
+                style: {
+                    // backgroundColor: "#F5FFC6"
+                    backgroundColor: "#BFE4DD"
+                }
             },
-            style: {
-                // backgroundColor: "#F5FFC6"
-                backgroundColor: "#BFE4DD"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteTodo",
-            isPinned: true,
-            info: {
-                title: "Things to do:",
-                todos: [
-                    { txt: "console.log", doneAt: null },
-                    { txt: "empty local storage", doneAt: 187111111 },
-                    { txt: "pull before push", doneAt: 187111111 }
-                ]
+            {
+                id: utilService.makeId(),
+                type: "noteTodo",
+                isPinned: true,
+                info: {
+                    title: "Things to do:",
+                    todos: [
+                        { txt: "console.log", doneAt: null },
+                        { txt: "empty local storage", doneAt: 187111111 },
+                        { txt: "pull before push", doneAt: 187111111 }
+                    ]
+                },
+                style: {
+                    backgroundColor: "#C1C1C1"
+                }
             },
-            style: {
-                backgroundColor: "#C1C1C1"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteText",
-            isPinned: true,
-            info: {
-                txt: "To be or Note to be :)"
+            {
+                id: utilService.makeId(),
+                type: "noteText",
+                isPinned: true,
+                info: {
+                    txt: "To be or Note to be :)"
+                },
+                style: {
+                    // backgroundColor: "#F5FFC6"
+                    backgroundColor: "#BFE4DD"
+                }
             },
-            style: {
-                // backgroundColor: "#F5FFC6"
-                backgroundColor: "#BFE4DD"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteText",
-            isPinned: true,
-            info: {
-                txt: "Maya's number: 09-7963524"
+            {
+                id: utilService.makeId(),
+                type: "noteText",
+                isPinned: true,
+                info: {
+                    txt: "Maya's number: 09-7963524"
+                },
+                style: {
+                    // backgroundColor: "#F5FFC6"
+                    backgroundColor: "#F6B6B4"
+                }
             },
-            style: {
-                // backgroundColor: "#F5FFC6"
-                backgroundColor: "#F6B6B4"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteTodo",
-            isPinned: true,
-            info: {
-                title: "Things to do:",
-                todos: [
-                    { txt: "Chicken", doneAt: null },
-                    { txt: "Vegetables", doneAt: 187111111 },
-                    { txt: "Some apples", doneAt: 187111111 }
-                ]
+            {
+                id: utilService.makeId(),
+                type: "noteTodo",
+                isPinned: true,
+                info: {
+                    title: "Things to do:",
+                    todos: [
+                        { txt: "Chicken", doneAt: null },
+                        { txt: "Vegetables", doneAt: 187111111 },
+                        { txt: "Some apples", doneAt: 187111111 }
+                    ]
+                },
+                style: {
+                    backgroundColor: "#C1C1C1"
+                }
             },
-            style: {
-                backgroundColor: "#C1C1C1"
-            }
-        },
-        {
-            id: utilService.makeId(),
-            type: "noteImg",
-            isPinned: true,
-            info: {
-                url: "https://picsum.photos/id/691/200/120",
-                title: "Me playing Mi"
+            {
+                id: utilService.makeId(),
+                type: "noteImg",
+                isPinned: true,
+                info: {
+                    url: "https://picsum.photos/id/691/200/120",
+                    title: "Me playing Mi"
+                },
+                style: {
+                    backgroundColor: "#F6B6B4"
+                }
             },
-            style: {
-                backgroundColor: "#F6B6B4"
-            }
-        },
-    ];
-    return notes;
+        ];
+        storageService.storeToStorage(STORAGE_KEY, notes);
+        return Promise.resolve(notes);
+    }
 }
