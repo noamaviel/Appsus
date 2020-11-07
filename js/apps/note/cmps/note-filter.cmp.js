@@ -1,4 +1,3 @@
-// console.log('note-filter');
 
 export default {
     props: [],
@@ -9,12 +8,13 @@ export default {
             
                 <form @submit.prevent="emitFilter" > 
 
-                <label>
-                    <input class="note-input" type="text" v-model="filterBy.byText" placeholder="Search here" />
-                </label>
-                <button class="note-search">
-                <input type="submit" value="Search"><i class="fas fa-search"></i>
-                </button>
+                    <label>
+                        <input class="note-input" type="text" v-model="filterBy.byText" placeholder="Search here" />
+                     </label>
+
+                    <button class="note-search">
+                        <input type="submit" value="Search"><i class="fas fa-search"></i>
+                    </button>
                 
                 </form>
             
@@ -30,7 +30,6 @@ export default {
     methods: {
         emitFilter() {
             this.$emit('doFilter', this.filterBy);
-            console.log('emitFilter')
         },
         onResetFilter() {
             this.$emit('doFilter', { byText: '', created: '', isPinned: this.filterBy.isPinned })

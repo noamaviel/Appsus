@@ -10,11 +10,13 @@ export default {
                 <li v-for="(todo,index) in info.todos" :index="index" :key="todo.txt">
                     <label v-if="todo.isDone" :style="{'text-decoration': 'line-through'}">
                         <input type="checkbox" v-model="todo.isDone" @change="onCheckbox">
-                        {{ todo.txt }}</label>
+                        {{ todo.txt }}
+                    </label>
 
                     <label v-else :style="{'text-decoration': 'none'}"> 
-                  <input type="checkbox" v-model="todo.isDone" @change="onCheckbox">
-                  {{ todo.txt }}</label>
+                        <input type="checkbox" v-model="todo.isDone" @change="onCheckbox">
+                        {{ todo.txt }}
+                    </label>
                 </li>
             </ul>
         </section>
@@ -25,12 +27,11 @@ export default {
         }
     },
     created() {
-        //    console.log('addToDoNote in NOTE TO DO', noteService.addTodoNote())
+       
     },
     computed: {
         todoFontStyle() {
-            //    if (this.todo.isDone) return "{'text-decoration': 'line-through'}"
-            //    else return "{'text-decoration': 'none'}"
+           
         }
     },
     methods: {

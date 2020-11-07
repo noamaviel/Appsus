@@ -1,4 +1,3 @@
-// console.log('note-service');
 
 import { utilService } from '../../../services/util-service.js'
 import { storageService } from '../../../services/local-storage-service.js'
@@ -22,20 +21,14 @@ export const noteService = {
 
 function getNotes() {
     return _createNotes()
-    .then(notes => {
-        gNotes = notes;
-        return Promise.resolve(notes);
-    })
-    .catch(err => {
-        console.log('default notes', err);
-    });
+        .then(notes => {
+            gNotes = notes;
+            return Promise.resolve(notes);
+        })
+        .catch(err => {
+            console.log('default notes', err);
+        });
 }
-
-
-// function getNotes() {
-//     return Promise.resolve(gNotes);
-// }
-
 
 function remove(noteId) {
     const idx = gNotes.findIndex(note => note.id === noteId);
@@ -43,9 +36,7 @@ function remove(noteId) {
     storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
 
-
 function addNote(noteData) {
-    // console.log('addNote', noteData);
     switch (noteData.type) {
         case 'noteText':
             addTxtNote(noteData)
@@ -62,8 +53,6 @@ function addNote(noteData) {
     }
 }
 
-
-
 function addTxtNote(noteData) {
     let note = {
         id: utilService.makeId(),
@@ -79,7 +68,6 @@ function addTxtNote(noteData) {
     gNotes.push(note);
     storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
-
 
 function addImgNote(noteData) {
 
@@ -124,7 +112,6 @@ function _getTodoArray(valStr) {
             doneAt: null,
         }
     })
-    console.log('todoArray', todoArray);
     return todoArray;
 }
 
@@ -145,7 +132,6 @@ function pinToStart(noteId) {
 function updateLocalStorage() {
     storageService.storeToStorage(STORAGE_KEY, gNotes);
 }
-
 
 function addVideoNote(noteData) {
 
@@ -170,7 +156,6 @@ function _createNotes() {
     if (notes) {
         return Promise.resolve(notes);
     } else {
-
         let notes = [
             {
                 id: utilService.makeId(),
@@ -180,7 +165,6 @@ function _createNotes() {
                     txt: "Bye bye Trump :)"
                 },
                 style: {
-                    // backgroundColor: "#F5FFC6"
                     backgroundColor: "#F6B6B4"
                 }
             },
@@ -218,7 +202,7 @@ function _createNotes() {
                 isPinned: true,
                 info: {
                     videoUrl: "https://www.youtube.com/embed/ICAgFDASPII",
-                    title: "Arthur!",
+                    title: "Moomintroll and the End of the World",
                 },
                 style: {
                     backgroundColor: "#F6B6B4"
@@ -232,7 +216,6 @@ function _createNotes() {
                     txt: "Price of my therapist: 400 NIS"
                 },
                 style: {
-                    // backgroundColor: "#F5FFC6"
                     backgroundColor: "#BFE4DD"
                 }
             },
@@ -260,7 +243,6 @@ function _createNotes() {
                     txt: "To be or Note to be :)"
                 },
                 style: {
-                    // backgroundColor: "#F5FFC6"
                     backgroundColor: "#BFE4DD"
                 }
             },
@@ -272,7 +254,6 @@ function _createNotes() {
                     txt: "Maya's number: 09-7963524"
                 },
                 style: {
-                    // backgroundColor: "#F5FFC6"
                     backgroundColor: "#F6B6B4"
                 }
             },

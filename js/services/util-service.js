@@ -1,4 +1,3 @@
-console.log('utils-services-run')
 
 export const utilService = {
     makeId,

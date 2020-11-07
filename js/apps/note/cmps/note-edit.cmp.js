@@ -13,10 +13,7 @@ export default {
             <li @click="pinNote">
                 <i class="fas fa-thumbtack"></i>
             </li>
-<!--             
-            <li @click="editNote(note)">
-                <i class="fas fa-edit"></i>
-            </li> -->
+
 
             <li @click="showColors= !showColors">
                 <i class="fas fa-palette"></i>
@@ -60,7 +57,6 @@ export default {
             eventBus.$emit(EVENT_SHOW_MSG, msg)
         },
         pinNote() {
-            console.log('pin clicked')
             noteService.pinToStart(this.noteId);
         }
 

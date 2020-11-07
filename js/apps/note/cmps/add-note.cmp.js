@@ -7,17 +7,16 @@ export default {
     props: [''],
     template: `
       <section class="add-note-container flex">
-        <!-- <h3>Add A Note</h3> -->
             <div class="add-input-container flex">
 
-            <form @submit.prevent="addNote" class="add-note-input" >
-               <input type="text" v-model="noteData.val" :placeholder="placeholder">
-            </form>
+                 <form @submit.prevent="addNote" class="add-note-input" >
+                     <input type="text" v-model="noteData.val" :placeholder="placeholder">
+                 </form>
 
-            <button @click="setType('noteText')"><i class="fas fa-font"></i></button>
-            <button @click="setType('noteImg')"><i class="fas fa-image"></i></button>
-            <button @click="setType('noteTodo')"><i class="fas fa-list-ul"></i></button>
-            <button @click="setType('noteVideo')"><i class="fab fa-youtube"></i></button>
+                 <button @click="setType('noteText')"><i class="fas fa-font"></i></button>
+                 <button @click="setType('noteImg')"><i class="fas fa-image"></i></button>
+                 <button @click="setType('noteTodo')"><i class="fas fa-list-ul"></i></button>
+                 <button @click="setType('noteVideo')"><i class="fab fa-youtube"></i></button>
 
             </div>
     </section>
@@ -48,7 +47,6 @@ export default {
 
     methods: {
         addNote() {
-            // console.log(this.noteData);
             noteService.addNote({ ...this.noteData })
             this.noteData.val = '';
         },
@@ -56,7 +54,6 @@ export default {
             this.noteData.type = type;
         },
         addFromMail(data) {
-            console.log('addFromMail', data);
             this.noteData.val = data;
             this.setType('noteText');
             this.addNote();

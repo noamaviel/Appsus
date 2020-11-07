@@ -80,11 +80,7 @@ header a:hover {
 /*--------------- footer ---------------*/
 
 footer {
-    /* position: fixed; */
-    /* position: absolute; */
-    /* left: 0; */
     bottom: 0;
-    /* width: 100%; */
     background-color: rgb(255, 255, 255);
     text-align: center;
     padding: 6px;

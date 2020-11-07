@@ -1,4 +1,3 @@
-// console.log('note-app');
 
 import { noteService } from '../services/note-service.js';
 import noteList from '../cmps/note-list.cmp.js';
@@ -17,31 +16,20 @@ export default {
         <note-filter class= "flex" @doFilter="setFilter" />
         <note-details v-if="selectedNote"  :note="selectedNote"/>
         <note-list :notes="notesToShow" @remove="removeNote" @selected="selectNote" />
-        <!-- <pre>{{note}}</pre> -->
-
-
 
     </section>
     `,
-
     data() {
-
         return {
             notes: null,
             selectedNote: null,
-            // note: noteService.getNotes(),
             filterBy: null,
-
         }
-
     },
-
     computed: {
         notesToShow() {
             if (!this.filterBy) return this.notes;
-            console.log('thisfilterBy', this.filterBy)
             const txt = this.filterBy.byText.toLowerCase()
-            console.log('txt', txt);
             return this.notes.filter(note => {
                 let found = false;
 
@@ -63,9 +51,7 @@ export default {
                 return found;
             });
         }
-
     },
-
     methods: {
 
         removeNote(noteId) {
@@ -75,29 +61,20 @@ export default {
             let filter = {};
             filter = { ...filterBy };
             this.filterBy = filter;
-            // this.filterBy = filterBy;
-            console.log('this.filterBy', this.filterBy);
         },
-
         selectNote(noteId) {
             const selectedNote = this.notes.find(note => note.id === noteId);
             this.selectedNote = selectedNote;
-            console.log('select note', noteId)
-            console.log('this.selectedNote', this.selectedNote);
         },
     },
 
     created() {
-        // this.notes = noteService.getNotes();
         noteService.getNotes()
-        .then(notes => {
-            console.log('notes app finished created', notes);
-            this.notes = notes;
-        });
+            .then(notes => {
+                this.notes = notes;
+            });
 
-    }
-    ,
-
+    },
     components: {
         noteList,
         noteService,

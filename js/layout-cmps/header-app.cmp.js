@@ -3,7 +3,8 @@ import userMsg from './user-msg.cmp.js';
 export default {
     template: `
     <header class="app-header">
-    <user-msg/>
+        
+        <user-msg/>
         <router-link to="/" class= "header-logo">Appsus</router-link>
     
         <nav>

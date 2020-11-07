@@ -6,6 +6,6 @@ export default {
     template: `
         <section class="note-txt">
              <h3> {{info.txt}} </h3>
-            </section>
+        </section>
     `
 }

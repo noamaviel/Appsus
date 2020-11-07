@@ -1,4 +1,3 @@
-console.log('storage service run')
 
 export const storageService = {
   storeToStorage,

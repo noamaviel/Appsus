@@ -43,17 +43,7 @@ const myRoutes = [
                 props: {
                     details: true
                 }
-                //    
-
-                // },
-                // props: {
-                //           details: true
-                // function mode, more about it below
-                //   sidebar: route => ({ search: route.query.q })
-                // }
             },
-
-
         ]
     },
     {
@@ -63,16 +53,3 @@ const myRoutes = [
 ]
 
 export const myRouter = new VueRouter({ routes: myRoutes })
-
-// {
-//     path: '/user/:id',
-//     components: {
-//       default: User,
-//       sidebar: Sidebar
-//     },
-//     props: {
-//       default: true,
-//       // function mode, more about it below
-//       sidebar: route => ({ search: route.query.q })
-//     }
-//   }
