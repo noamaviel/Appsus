@@ -34,7 +34,7 @@ export default {
         },
         onResetFilter() {
             this.$emit('doFilter', { byText: '', created: '', isPinned: this.filterBy.isPinned })
-            document.querySelector('.search-input').value = ''
+            document.querySelector('.note-input').value = ''
         }
 
     }
