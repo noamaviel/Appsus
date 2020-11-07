@@ -1,0 +1,21 @@
+.add-note-container {
+    padding-bottom: 20px;
+}
+
+.add-input-container {
+    align-items: center;
+    width: 400px;
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 2px;    
+    background-color: #fff;
+}
+
+.add-input-container button {
+    font-size: 20px;
+}
+
+.add-input-container .add-note-input input {
+    width: 250px;
+    border: none;
+    background-color: transparent;
+}

@@ -1,0 +1,127 @@
+/* FONTS */
+
+@import './global-styles/fonts.css';
+/* BASE STYLES */
+
+@import './global-styles/base.css';
+/* HELPERS */
+
+@import './global-styles/helpers.css';
+/* PAGE */
+
+@import './global-styles/pages/home-page-app.css';
+@import './global-styles/pages/about-app.css';
+/* CMPS */
+
+@import './global-styles/cmps/long-text.css';
+@import './global-styles/cmps/user-msg.css';
+/* -----------------------APS STYLES----------------------- */
+
+/* -----------------------EMAIL----------------------- */
+
+/* CMPS */
+
+@import './apps/email/cmps/email-list.css';
+@import './apps/email/cmps/email-preview.css';
+@import './apps/email/cmps/email-filter.css';
+@import './apps/email/cmps/email-compose.css';
+@import './apps/email/cmps/email-side-bar.css';
+/* PAGES */
+
+@import './apps/email/pages/email-app.css';
+/* -----------------------NOTE----------------------- */
+
+/* CMPS */
+
+@import './apps/note/cmps/add-note.css';
+@import './apps/note/cmps/note-list.css';
+@import './apps/note/cmps/note-filter.css';
+@import './apps/note/cmps/note-edit.css';
+@import './apps/note/cmps/note-preview.css';
+/* PAGES */
+
+@import './apps/note/pages/note-app.css';
+/*--------------- MAIN ---------------*/
+
+/*--------------- header area ---------------*/
+
+header {
+    background-color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    padding: 20px;
+    color: rgba(88, 88, 88);
+}
+
+.header-logo {
+    font-family: FrederickatheGreatR, cursive;
+    display: inline-block;
+    font-size: 1.8em;
+    margin-left: 1em;
+    margin-right: 2em;
+}
+
+header nav {
+    display: inline-block;
+}
+
+header nav a {
+    font-family: poppinsL, sans-serif;
+    font-size: 1em;
+    padding-right: 20px;
+}
+
+header a:hover {
+    color: #36aa9e;
+}
+
+/*--------------- main-content ---------------*/
+
+/*--------------- footer ---------------*/
+
+footer {
+    /* position: fixed; */
+    /* position: absolute; */
+    /* left: 0; */
+    bottom: 0;
+    /* width: 100%; */
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 6px;
+}
+
+/*--------------- MEDIA QUERIES ---------------*/
+
+@media (max-width: 1200px) {
+    header {
+        padding: 15px;
+    }
+    
+    .header-logo {
+        font-size: 1.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+   
+    header nav a {
+        font-size: .8em;
+    }
+    
+}
+
+@media (max-width: 840px) {
+    header {
+        padding: 12px;
+    }
+    
+    .header-logo {
+        font-size: 1.4em;
+        margin-left: 0;
+        margin-right: .4em;
+    }
+   
+    header nav a {
+        padding-right: 5px;
+        font-size: .8em;
+    }
+    
+}

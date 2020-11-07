@@ -1,0 +1,61 @@
+/*--------------- Fontface ---------------*/
+
+/* poppins */
+
+@font-face {
+    font-family: poppinsR;
+    src: url(../assets/fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppinsL;
+    src: url(../assets/fonts/poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: poppinsXB;
+    src: url(../assets/fonts/poppins/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: poppinsSB;
+    src: url(../assets/fonts/poppins/Poppins-SemiBold.ttf);
+}
+
+/* CormorantGaramond */
+
+@font-face {
+    font-family: CormorantGaramondL;
+    src: url(../assets/fonts/CormorantGaramond/CormorantGaramond-Light.ttf);
+}
+
+@font-face {
+    font-family: CormorantGaramondR;
+    src: url(../assets/fonts/CormorantGaramond/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+    font-family: CormorantGaramondSM;
+    src: url(../assets/fonts/CormorantGaramond/CormorantGaramond-SemiBold.ttf);
+}
+
+/* other */
+
+@font-face {
+    font-family: megrimR;
+    src: url(../assets/fonts/Megrim-Regular.ttf);
+}
+
+@font-face {
+    font-family: FrederickatheGreatR;
+    src: url(../assets/fonts/FrederickatheGreat-Regular.ttf);
+}
+
+@font-face {
+    font-family: ArchitectsDaughterR;
+    src: url(../assets/fonts/ArchitectsDaughter-Regular.ttf);
+}
+@font-face {
+    font-family: SyneMonoR;
+    src: url(../assets/fonts/SyneMono-Regular.ttf);
+}

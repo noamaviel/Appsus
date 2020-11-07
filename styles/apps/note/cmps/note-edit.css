@@ -1,0 +1,35 @@
+.note-edit-container {
+    justify-content: space-around;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 160px;
+    padding-inline-start: 0;
+
+}
+
+.note-edit-container i {
+    cursor: pointer;
+}
+
+.note-edit-container li{
+margin:0;
+}
+
+.colors-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+   
+}
+
+.color {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-bottom: 3px;
+}
+
+

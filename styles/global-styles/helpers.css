@@ -1,0 +1,30 @@
+
+/*--------------- HELPERS ---------------*/
+
+/*--------------- flex helpers ---------------*/
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*--------------- list-helpers ---------------*/
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

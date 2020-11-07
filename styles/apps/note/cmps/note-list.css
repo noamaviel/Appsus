@@ -1,0 +1,20 @@
+/* .note-list-container {
+    margin: 30px;
+    border: 1px solid black;
+    padding: 20px;
+} */
+
+.note-list-container .notes {
+    padding-inline-start: 0;
+    flex-wrap: wrap;
+}
+
+.note-list-container .notes .note {
+    box-shadow: 5px 4px 6px 0px #c2c2c2;
+    background-color: #F5FFC6;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    min-width: 200px;
+    min-height: 300px;
+}

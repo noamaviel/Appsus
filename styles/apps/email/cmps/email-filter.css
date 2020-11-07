@@ -1,0 +1,25 @@
+
+.email-filter {
+    max-width: 400px;
+}
+
+.email-filter-container {
+    border: 1px solid rgb(105, 105, 105);
+    border-radius: 2px;
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+
+.email-filter-container .email-input {
+    height: 27px;
+    border: none;
+}
+
+.email-search {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.email-search input {
+    display: none;
+}

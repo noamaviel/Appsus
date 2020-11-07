@@ -1,0 +1,20 @@
+
+.email-app {
+    background-color: rgb(231, 231, 231);
+    padding: 20px;
+    font-family: poppinsL,sans-serif;
+    display: flex;
+    flex-grow: 1;
+}
+
+.work-area {
+    flex-grow: 1;
+    align-items: center;
+}
+
+@media (max-width: 840px) {
+    .email-app {
+        padding: 20px 0px 20px 0px;
+    }
+    
+}

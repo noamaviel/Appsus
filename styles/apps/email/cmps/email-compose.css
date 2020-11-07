@@ -1,0 +1,37 @@
+.email-compose .compose-form>* {
+    margin-bottom: 3px;
+}
+
+.compose-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+ 
+}
+
+.new-mail-btns {
+    justify-content: flex-start;
+    font-size: 4rem;
+}
+
+.new-mail-btns .sendBtn {
+    padding: 8px 30px 8px 30px;
+    font-size: 1.5rem;
+    background-color: #8bc7bc;
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    border-radius: 20px;
+    margin: 20px 20px 20px 0px;
+}
+
+.new-mail-btns .sendBtn:hover {
+    transition: 0.3s;
+    background-color: #C0E5DE;
+}
+
+.sendTodraft {
+    font-size: 1.5rem;
+}
+.sendTodraft:hover {
+    color: #909090;
+}
+
