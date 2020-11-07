@@ -14,9 +14,12 @@ export default {
         <div class='side-bar'>
             
             <router-link :to="'/email/compose'" exact class="compose-button"><i class="fas fa-plus"></i> Compose</router-link>
-            <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-inbox"></i> Inbox</router-link>
-            <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-paper-plane"></i> Sent</router-link>
-            <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-star"></i> Starred</router-link>
+           <button @click="onInbox"><i class="fas fa-inbox"></i>Inbox</button>
+            <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-inbox"></i> Inbox</router-link> -->
+            <button @click="onInbox"><i class="fas fa-paper-plane"></i> Sent</button>
+            <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-paper-plane"></i> Sent</router-link> -->
+             <button @click="onStarred"><i class="fas fa-star"></i> Starred</button>
+            <!-- <router-link :to="'/email/filter'" exact class="inbox-button"><i class="fas fa-star"></i> Starred</router-link> -->
 
         </div>
         <div class="work-area">
@@ -34,6 +37,7 @@ export default {
         return {
             emails: null,
             filterBy: null,
+            isStarred: false
         }
     },
     methods: {
@@ -43,22 +47,39 @@ export default {
             filter = { ...filterBy };
             this.filterBy = filter;
             console.log('this.filterBy', this.filterBy);
+        },
+        onStarred() {
+            console.log('onStarred')
+            this.isStarred = true;
+            this.$router.push('/email/filter');
+        },
+        onInbox() {
+            this.isStarred = false;
+            this.$router.push('/email/filter');
         }
     },
     computed: {
         emailsToShow() {
-            if (!this.filterBy) return this.emails;
+            if (!this.filterBy && !this.isStarred) return this.emails;
 
-            const txt = this.filterBy.byText.toLowerCase();
-            return this.emails.filter(email =>
-                (email.subject.toLowerCase().includes(txt) ||
+
+            return this.emails.filter(email => {
+
+                let show = true;
+                show = (this.isStarred && email.isStar || !this.isStarred);
+                if (!show) return false;
+
+                if (!this.filterBy) return true;
+                const txt = this.filterBy.byText.toLowerCase();
+                show = (email.subject.toLowerCase().includes(txt) ||
                     email.sendTo.toLowerCase().includes(txt) ||
                     email.body.toLowerCase().includes(txt)) &&
-                (
-                    email.isRead && this.filterBy.isRead ||
-                    !email.isRead && this.filterBy.isUnread
-                )
-            )
+                    (
+                        email.isRead && this.filterBy.isRead ||
+                        !email.isRead && this.filterBy.isUnread
+                    )
+                return show;
+            })
         }
     },
     mounted() {

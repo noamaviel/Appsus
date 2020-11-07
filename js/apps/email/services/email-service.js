@@ -12,7 +12,8 @@ export const emailService = {
     markAsRead,
     getEmptyEmail,
     add,
-    getUnreadCount
+    getUnreadCount,
+    toggleStar
 }
 const STORAGE_KEY = 'emailDB';
 var gEmails = [];
@@ -40,12 +41,12 @@ function _createEmails() {
         return Promise.resolve(emails);
     } else {
         emails = [];
-        emails.push(_createEmail('Mor','Where to Drink Beer Right Now', 'Humans have a natural desire for closure– '));
-        emails.push(_createEmail('Neta','As You Wish', 'we don’t like having gaps in our knowledge.'));
+        emails.push(_createEmail('Mor', 'Where to Drink Beer Right Now', 'Humans have a natural desire for closure– '));
+        emails.push(_createEmail('Neta', 'As You Wish', 'we don’t like having gaps in our knowledge.'));
         emails.push(_createEmail('Matan', 'NEW! Vacation on Mars', 'You can leverage this desire for closure by leaving '));
         emails.push(_createEmail('Jill', 'Mary, do you remember me', 'You can make subscribers curious by asking a question,'));
-        emails.push(_createEmail('Simon','I love you', 'Being humorous requires a bit more thought and creativity, '));
-        emails.push(_createEmail('Paul','Seriously, Who DOES This?', 'Everyone has a bit of vanity. '));
+        emails.push(_createEmail('Simon', 'I love you', 'Being humorous requires a bit more thought and creativity, '));
+        emails.push(_createEmail('Paul', 'Seriously, Who DOES This?', 'Everyone has a bit of vanity. '));
         emails.push(_createEmail('David', 'Thanks for helping us', 'That’s why some of the most clever subject lines'));
         emails.push(_createEmail('Shlomo', 'I’m deleting your Envira account', 'To do this, you can either promise something '));
         emails.push(_createEmail('Aviva', '*Don’t Open This Email*', 'Here are some great examples of clever email'));
@@ -55,7 +56,7 @@ function _createEmails() {
     }
 }
 
-function _createEmail(sendTo ='', subject = '', body = '') {
+function _createEmail(sendTo = '', subject = '', body = '') {
 
     const email = {
         id: utilService.makeId(),
@@ -65,7 +66,8 @@ function _createEmail(sendTo ='', subject = '', body = '') {
         body: body,
         isRead: false,
         sentAt: getTime(),
-        draft: false
+        draft: false,
+        isStar: false,
     }
     return email;
 }
@@ -83,6 +85,12 @@ function getUnreadCount() {
 
 function getEmptyEmail() {
     return { id: utilService.makeId(), sentBy: 'Noam', sendTo: '', subject: '', body: '', isRead: false, sentAt: getTime(), draft: false }
+}
+
+function toggleStar(emailId) {
+    const emailIdx = gEmails.findIndex(email => email.id === emailId);
+    gEmails[emailIdx].isStar = !gEmails[emailIdx].isStar;
+    storageService.storeToStorage(STORAGE_KEY, gEmails);
 }
 
 function add(newEmail) {

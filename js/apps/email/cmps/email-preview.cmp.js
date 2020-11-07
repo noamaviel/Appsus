@@ -1,4 +1,5 @@
 console.log('email-preview');
+import { emailService } from '../services/email-service.js'
 
 export default {
     name: 'email-preview',
@@ -6,7 +7,9 @@ export default {
     template: `
     <section :style="bcgStyleObject" class="email-preview" @click="$router.push('/email/'+email.id)">
 
-     <span class="email-sentby">{{email.sendTo}}</span>
+    <i v-if="email.isStar" class="fas fa-star" @click.stop="onStarToggle"></i>
+    <i v-else class="far fa-star" @click.stop="onStarToggle"></i>
+    <span class="email-sentby">{{email.sendTo}}</span>
      <span :style="subjectStyleObject"   class="email-subject">{{email.subject}}</span>
      <span class="email-body">{{email.body}}</span>
      <span class="email-sentat">{{email.sentAt}}</span>
@@ -20,7 +23,9 @@ export default {
         }
     },
     methods: {
-
+        onStarToggle() {
+            emailService.toggleStar(this.email.id);
+        }
 
     },
     computed: {
@@ -40,7 +45,7 @@ export default {
 
     },
     created() {
-
+     
     },
     components: {
 
