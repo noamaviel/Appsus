@@ -153,7 +153,7 @@ function _createNotes() {
             type: "noteText",
             isPinned: true,
             info: {
-                txt: "Fullstack Me Baby!"
+                txt: "Bye bye Trump :)"
             },
             style: {
                 // backgroundColor: "#F5FFC6"
@@ -179,12 +179,13 @@ function _createNotes() {
             info: {
                 title: "Things to do:",
                 todos: [
-                    { txt: "Do that", doneAt: null },
-                    { txt: "Do this", doneAt: 187111111 }
+                    { txt: "sleep", doneAt: null },
+                    { txt: "eat", doneAt: 187111111 },
+                    { txt: "take a shower", doneAt: 187111111 }
                 ]
             },
             style: {
-                backgroundColor: "#F6B6B4"
+                backgroundColor: "#C1C1C1"
             }
         },
         {
@@ -198,7 +199,87 @@ function _createNotes() {
             style: {
                 backgroundColor: "#F6B6B4"
             }
-        }
+        },
+        {
+            id: utilService.makeId(),
+            type: "noteText",
+            isPinned: true,
+            info: {
+                txt: "Price of my therapist: 400 NIS"
+            },
+            style: {
+                // backgroundColor: "#F5FFC6"
+                backgroundColor: "#BFE4DD"
+            }
+        },
+        {
+            id: utilService.makeId(),
+            type: "noteTodo",
+            isPinned: true,
+            info: {
+                title: "Things to do:",
+                todos: [
+                    { txt: "console.log", doneAt: null },
+                    { txt: "empty local storage", doneAt: 187111111 },
+                    { txt: "pull before push", doneAt: 187111111 }
+                ]
+            },
+            style: {
+                backgroundColor: "#C1C1C1"
+            }
+        },
+        {
+            id: utilService.makeId(),
+            type: "noteText",
+            isPinned: true,
+            info: {
+                txt: "To be or Note to be :)"
+            },
+            style: {
+                // backgroundColor: "#F5FFC6"
+                backgroundColor: "#BFE4DD"
+            }
+        },
+        {
+            id: utilService.makeId(),
+            type: "noteText",
+            isPinned: true,
+            info: {
+                txt: "Maya's number: 09-7963524"
+            },
+            style: {
+                // backgroundColor: "#F5FFC6"
+                backgroundColor: "#F6B6B4"
+            }
+        },
+        {
+            id: utilService.makeId(),
+            type: "noteTodo",
+            isPinned: true,
+            info: {
+                title: "Things to do:",
+                todos: [
+                    { txt: "Chicken", doneAt: null },
+                    { txt: "Vegetables", doneAt: 187111111 },
+                    { txt: "Some apples", doneAt: 187111111 }
+                ]
+            },
+            style: {
+                backgroundColor: "#C1C1C1"
+            }
+        },
+        {
+            id: utilService.makeId(),
+            type: "noteImg",
+            isPinned: true,
+            info: {
+                url: "https://picsum.photos/id/691/200/120",
+                title: "Me playing Mi"
+            },
+            style: {
+                backgroundColor: "#F6B6B4"
+            }
+        },
     ];
     return notes;
 }
