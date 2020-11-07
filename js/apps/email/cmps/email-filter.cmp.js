@@ -22,14 +22,22 @@ export default {
                 </form>
             </div>
 
+                <!-- <div class= "checkbox-container"> -->
+                    <!-- <label> <i class="fas fa-envelope-open"></i>
+                        <input class="chek-box" @change="emitFilter" type="checkbox" v-model="filterBy.isRead"/>
+                    </label> -->
 
-                <label> Read
-                    <input @change="emitFilter" type="checkbox" v-model="filterBy.isRead"/>
-                </label>
+                    <label class="checkbox-container"><i class="fas fa-envelope-open"></i>
+                        <input @change="emitFilter" type="checkbox" checked="checked" v-model="filterBy.isRead">
+                        <span class="checkmark"></span>
+                    </label>
 
-                <label> Unread
-                    <input @change="emitFilter" type="checkbox" v-model="filterBy.isUnread"/>
-                </label>
+                    <label class="checkbox-container"><i class="fas fa-envelope"></i>
+                        <input @change="emitFilter" type="checkbox" checked="checked" v-model="filterBy.isUnread">
+                        <span class="checkmark"></span>
+                    </label>
+
+                <!-- </div> -->
         </section>
     `,
     data() {
