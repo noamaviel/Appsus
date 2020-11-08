@@ -13,11 +13,13 @@
     font-size: 20px;
     color: rgb(156, 156, 156);
 }
+
 .add-input-container button:hover {
-color: #6f9b97;
+    color: #6f9b97;
 }
+
 .add-input-container button:focus {
-color: inherit;
+    color: inherit;
 }
 
 .add-input-container .add-note-input input {

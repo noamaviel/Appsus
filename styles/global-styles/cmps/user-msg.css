@@ -1,12 +1,21 @@
-.user-msg{
+.user-msg {
     position: absolute;
     top: 120px;
     right: 160px;
-    background-color:#f5c2c271;
+    background-color: #f5c2c271;
     box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
     border-radius: 20px;
     padding: 8px 30px 8px 30px;
     text-align: center;
-    font-family: poppinsSB,cursive;
-    
+    font-family: poppinsSB, cursive;
+}
+
+@media (max-width: 840px) {
+    .user-msg {
+        top: 500px;
+        right: 20px;
+        padding: 2px 10px 0px 10px;
+        font-size: .8em;
+        z-index: 2;
+    }
 }

@@ -10,15 +10,13 @@
     font-weight: 600;
 }
 
-.note-preview .note-edit{
+.note-preview .note-edit {
     flex-direction: column;
 }
-
 
 .note-preview .note-content ul {
     padding-inline-start: 0;
 }
-
 
 .note-preview .note-content iframe {
     margin-top: 0;
@@ -34,4 +32,4 @@
 
 li {
     height: 30px;
-    }
+}

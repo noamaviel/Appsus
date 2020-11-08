@@ -6,7 +6,7 @@ export default {
         
         <user-msg/>
         <router-link to="/" class= "header-logo">Appsus</router-link>
-    
+
         <nav>
                 <router-link to="/email">Email</router-link>
                 <router-link to="/note">Note</router-link>

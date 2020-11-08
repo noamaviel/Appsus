@@ -21,7 +21,6 @@
 .email-sentby {
     font-weight: bold;
     min-width: 10;
-    /* padding-inline-start: 1.25rem; */
 }
 
 .email-subject {
@@ -29,7 +28,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* padding-inline-start: 1.25rem; */
 }
 
 .email-body {
@@ -37,12 +35,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 50%;
-    /* padding-inline-start: 1.25rem; */
 }
 
 .email-sentat {
     min-width: 10%;
-    /* padding-inline-start: 1.25rem; */
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
@@ -51,7 +47,6 @@
 
 @media (max-width: 680px) {
     .email-preview {
-        /* max-width: 380px; */
         font-size: .700em;
     }
     .email-preview i {

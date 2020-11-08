@@ -1,25 +1,31 @@
-
-
-.email-read{
+.email-read {
     background-color: #fff;
     box-shadow: 5px 4px 6px 0px #c2c2c2;
     padding: 30px;
     border-radius: 10px;
     color: rgb(85, 85, 85);
-
+    margin: 0px 10px 0px 10px;
 }
 
-.email-read h3{
+.email-read h3 {
     text-align: left;
     margin-top: 30px;
 }
-.email-read h5{
+
+.email-read h5 {
     padding-bottom: 50px;
 }
-.email-read button{
-font-size: 1em;
-}
-.email-read button:hover{
-color:#6F9B97 ;
+
+.email-read button {
+    font-size: 1em;
 }
 
+.email-read button:hover {
+    color: #6F9B97;
+}
+
+@media (max-width: 840px) {
+    .email-read button {
+        font-size: .75em;
+    }
+}

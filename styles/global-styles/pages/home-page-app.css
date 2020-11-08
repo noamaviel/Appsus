@@ -75,13 +75,13 @@
         line-height: 25px;
     }
     .home-page-app .home-page-background .buttons-container {
-        top:20px;
+        top: 20px;
     }
     .home-page-app .home-page-background .buttons-container button {
         border: none;
         background-color: transparent;
     }
     .home-page-app .home-page-background p {
-        bottom: 20px;}
+        bottom: 20px;
+    }
 }
-

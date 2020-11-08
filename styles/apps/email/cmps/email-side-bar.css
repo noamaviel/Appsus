@@ -16,7 +16,7 @@
     padding: 10px;
 }
 
-.compose-button-container:hover{
+.compose-button-container:hover {
     transition: 0.3s;
     background-color: #eff0f1;
 }
@@ -25,24 +25,24 @@
     margin-right: 10px;
 }
 
-
 .email-app .email-nav-buttons {
     flex-direction: column;
     align-items: flex-start;
 }
-.email-app .email-nav-buttons button{
-width: 162px;
+
+.email-app .email-nav-buttons button {
+    width: 162px;
 }
 
 .email-app .email-nav-buttons button {
     text-align: left;
     font-size: 1em;
-    margin:10px 0px 10px 0px
+    margin: 10px 0px 10px 0px
 }
+
 .email-app .email-nav-buttons button i {
     margin-right: 8px;
 }
-
 
 .email-app .email-nav-buttons button:hover {
     box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
@@ -52,6 +52,32 @@ width: 162px;
 
 @media (max-width: 840px) {
     .email-app .side-bar {
-        display: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        border-radius: 0;
+        background-color: #FDFEFE;
+        text-align: left;
+        position: absolute;
+        bottom: 64px;
+    }
+    .email-app .email-nav-buttons button {
+        width: 100px;
+        padding-bottom: 5px;
+        margin: 0;
+    }
+    .compose-button-container {
+        box-shadow: none;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        padding-top: 30px;
+        order: 2;
+    }
+    .compose-button-container:hover {
+        background-color: none;
+    }
+    .email-app .email-nav-buttons button:hover {
+        box-shadow: none;
     }
 }

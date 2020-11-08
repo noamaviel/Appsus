@@ -13,8 +13,8 @@
 @import './global-styles/pages/about-app.css';
 /* CMPS */
 
-@import './global-styles/cmps/long-text.css';
 @import './global-styles/cmps/user-msg.css';
+
 /* -----------------------APS STYLES----------------------- */
 
 /* -----------------------EMAIL----------------------- */
@@ -30,6 +30,7 @@
 /* PAGES */
 
 @import './apps/email/pages/email-app.css';
+
 /* -----------------------NOTE----------------------- */
 
 /* CMPS */
@@ -42,6 +43,7 @@
 /* PAGES */
 
 @import './apps/note/pages/note-app.css';
+
 /*--------------- MAIN ---------------*/
 
 /*--------------- header area ---------------*/
@@ -84,6 +86,7 @@ footer {
     background-color: rgb(255, 255, 255);
     text-align: center;
     padding: 6px;
+    font-family: poppinsL, sans-serif;
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
@@ -92,33 +95,27 @@ footer {
     header {
         padding: 15px;
     }
-    
     .header-logo {
         font-size: 1.6em;
         margin-left: 1em;
         margin-right: 1em;
     }
-   
     header nav a {
         font-size: .8em;
     }
-    
 }
 
 @media (max-width: 840px) {
     header {
         padding: 12px;
     }
-    
     .header-logo {
         font-size: 1.4em;
         margin-left: 0;
         margin-right: .4em;
     }
-   
     header nav a {
         padding-right: 5px;
         font-size: .8em;
     }
-    
 }
