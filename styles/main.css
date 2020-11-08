@@ -14,7 +14,6 @@
 /* CMPS */
 
 @import './global-styles/cmps/user-msg.css';
-
 /* -----------------------APS STYLES----------------------- */
 
 /* -----------------------EMAIL----------------------- */
@@ -30,7 +29,6 @@
 /* PAGES */
 
 @import './apps/email/pages/email-app.css';
-
 /* -----------------------NOTE----------------------- */
 
 /* CMPS */
@@ -43,7 +41,6 @@
 /* PAGES */
 
 @import './apps/note/pages/note-app.css';
-
 /*--------------- MAIN ---------------*/
 
 /*--------------- header area ---------------*/
@@ -117,5 +114,8 @@ footer {
     header nav a {
         padding-right: 5px;
         font-size: .8em;
+    }
+    footer {
+        font-size: 11px;
     }
 }
