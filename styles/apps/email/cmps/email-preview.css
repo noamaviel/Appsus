@@ -20,7 +20,7 @@
 
 .email-sentby {
     font-weight: bold;
-    min-width: 10;
+    min-width: 10%;
 }
 
 .email-subject {
@@ -28,6 +28,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
 
 .email-body {
@@ -35,10 +36,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 50%;
+
 }
 
 .email-sentat {
     min-width: 10%;
+
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
